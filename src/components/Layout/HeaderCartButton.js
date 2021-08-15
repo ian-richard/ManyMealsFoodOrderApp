@@ -11,8 +11,12 @@ const HeaderCartButton = props => {
         return curNumber + item.amount;
     }, 0)
 
+    const btnClasses = `${classes.button} ${classes.bump}`;
+    
 
-    return <button className={classes.button} onClick={props.onClick}>
+
+    return (
+      <button className={btnClasses} onClick={props.onClick}>
         <span className={classes.icon}>
         <CartIcon />
         </span> Your Cart <span>
@@ -20,7 +24,7 @@ const HeaderCartButton = props => {
         <span className={classes.badge}>
             {numberOfCartItems}
         </span>
-    </button>
+    </button>)
 };
 
 export default HeaderCartButton;
